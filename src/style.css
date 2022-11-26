@@ -12,7 +12,6 @@ body {
     margin: 0;
 }
 .form-container {
-    position: fixed;
     background-color: #4160d8f2;
     width: 100%;
     padding-top: 10px;
@@ -47,3 +46,76 @@ button {
     font-size: 20px;
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.photo-card {
+    flex-basis: calc(100%/4 - 15px);
+    margin-left: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
+.photo-card:hover {
+    box-shadow: 4px 3px 7px 1px #14141466;
+}
+.small-img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.card-link {
+    text-decoration: none;
+    color: black;
+}
+.info {
+    display: flex;
+    padding: 5px;
+}
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   padding-left: 10px;
+}
+.load-more.hidden {
+ display: none;
+}
+.load-more {
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.load-more:hover {
+    background-color: #4160d8f2;
+    color: #fafafa;
+}
+ html {
+     scroll-behavior: smooth;
+ }
+
+ .btn-up {
+     position: fixed;
+     background-color: #4160d8c2;
+     right: 20px;
+     bottom: 10px;
+     border-radius: 10px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 60px;
+     height: 50px;
+ }
+ .btn-up::before {
+     content: "";
+     width: 40px;
+     height: 40px;
+     background-size: 100% 100%;
+     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+ }
+ .btn-up_hide {
+     display: none;
+ }
